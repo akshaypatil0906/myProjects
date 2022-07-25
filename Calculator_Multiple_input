@@ -1,0 +1,94 @@
+import getpass
+while True:
+    def cnum1():
+        cnum = int(input("Enter count of numbers"))
+        for i in range(0,cnum):
+            input_num = float(input("Enter your number"))
+    def numbers():
+        #global a
+        #global b
+        global x
+        x = list(map(int, input("Enter your values with space: ").split()))
+        #print("List of students: ", x)
+        #b = float(input("Enter the Second Number = "))
+    def multi():
+        if(a > 1 and b > 1):
+            #c = a * b
+            total = 0
+            for ele in range(0, len(x)):
+                total = total + x[ele]
+        #print("Addition = ",total)
+            print("Multiplication = ",total)
+
+        else:
+            print("check the number")
+    def div():
+        if(a >= 0 and b >= 0 ):
+            try:
+                c = a / b
+                print("Division = ",c)
+             
+            except:
+                print("Cant devide")
+        
+            else:
+                print("Cant devide")
+            
+    def add():
+      
+        #c = a + b
+        total = 0
+        for ele in range(0, len(x)):
+            total = total + x[ele]
+        print("Addition = ",total)
+ 
+    
+    def sub():
+        #c = a - b
+        #print("Substraction = ",c)
+        total = 0
+        for ele in range(0, len(x)):
+            total = total - x[ele]
+        print("substraction = ",total)
+        
+    def code():
+        try:
+            i = int(input("1. Addition\n2. Substraction\n3. Multiplication\n4. Division\n= "))
+       
+            if (i == 1):
+                numbers()
+                add()
+            elif(i == 2):
+                numbers()
+                sub()
+            elif(i == 3):
+                numbers()
+                multi()
+            elif(i == 4):
+                numbers()
+                div()
+            else:
+                print("please check the number")
+        except:
+            print("invalid Value")
+        
+    def log():
+        try:
+            ab = int(input("Enter the login ID - "))
+            bb = getpass.getpass("Enter Password")
+        
+            if(ab == 1 and bb =="1" ):
+                code()
+            else:
+                print("Invalid ID and Password")
+        except:
+            print("invalid input")
+    log()
+    y = input("Do you want to continue [y/n]")
+    if(y == "y"):
+        log()
+    else:
+        break;
+    
+    
+        
